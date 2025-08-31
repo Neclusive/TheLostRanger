@@ -1,3 +1,50 @@
-[gd_scene format=3 uid="uid://diieidytcvpij"]
+[gd_scene load_steps=3 format=3 uid="uid://diieidytcvpij"]
+
+[ext_resource type="Texture2D" uid="uid://vukugm41yrbm" path="res://graphics/icon.svg" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://bqjvikfjb486c" path="res://graphics/menu_bg_grad.tres" id="1_ouk20"]
 
 [node name="Menu" type="Node2D"]
+
+[node name="bg" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+scale = Vector2(2.5, 360)
+texture = ExtResource("1_ouk20")
+
+[node name="logo" type="Sprite2D" parent="."]
+position = Vector2(140, 180)
+scale = Vector2(0.9375, 0.9375)
+texture = ExtResource("1_lti8b")
+
+[node name="menu_options" type="Node2D" parent="."]
+position = Vector2(430, 120)
+
+[node name="play" type="Button" parent="menu_options"]
+offset_left = 40.0
+offset_right = 81.0
+offset_bottom = 31.0
+text = "Play"
+flat = true
+
+[node name="settings" type="Button" parent="menu_options"]
+offset_left = 40.0
+offset_top = 31.0
+offset_right = 110.0
+offset_bottom = 62.0
+text = "Settings"
+flat = true
+
+[node name="fullscreen" type="Button" parent="menu_options"]
+offset_left = 40.0
+offset_top = 62.0
+offset_right = 127.0
+offset_bottom = 93.0
+text = "Fullscreen"
+flat = true
+
+[node name="credits" type="Button" parent="menu_options"]
+offset_left = 40.0
+offset_top = 93.0
+offset_right = 103.0
+offset_bottom = 124.0
+text = "Credits"
+flat = true
