@@ -16,39 +16,32 @@ scale = Vector2(0.9375, 0.9375)
 texture = ExtResource("1_lti8b")
 
 [node name="menu_options" type="Node2D" parent="."]
-position = Vector2(430, 120)
+position = Vector2(440, 80)
 
 [node name="play" type="Button" parent="menu_options"]
-offset_left = 10.0
-offset_right = 90.0
-offset_bottom = 31.0
+offset_right = 80.0
+offset_bottom = 40.0
 text = "Play"
 flat = true
-alignment = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="settings" type="Button" parent="menu_options"]
-offset_left = 10.0
-offset_top = 31.0
-offset_right = 90.0
-offset_bottom = 62.0
+offset_top = 40.0
+offset_right = 80.0
+offset_bottom = 80.0
 text = "Settings"
 flat = true
-alignment = 0
 
 [node name="credits" type="Button" parent="menu_options"]
-offset_left = 10.0
-offset_top = 62.0
-offset_right = 90.0
-offset_bottom = 93.0
+offset_top = 120.0
+offset_right = 80.0
+offset_bottom = 160.0
 text = "Credits"
 flat = true
-alignment = 0
 
-[node name="credits2" type="Button" parent="menu_options"]
-offset_left = 10.0
-offset_top = 93.0
-offset_right = 90.0
-offset_bottom = 124.0
+[node name="quit" type="Button" parent="menu_options"]
+offset_top = 160.0
+offset_right = 80.0
+offset_bottom = 200.0
 text = "Quit"
 flat = true
-alignment = 0
