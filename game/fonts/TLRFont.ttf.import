@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dnbkotd2i63vt"
-path="res://.godot/imported/BOB.ttf-135522a0dcb90effec95e1a482cd544c.fontdata"
+uid="uid://cqj38ysh8515i"
+path="res://.godot/imported/TLRFont.ttf-da18a29c7ada7ee4aa441e656e5179f5.fontdata"
 
 [deps]
 
-source_file="res://fonts/BOB.ttf"
-dest_files=["res://.godot/imported/BOB.ttf-135522a0dcb90effec95e1a482cd544c.fontdata"]
+source_file="res://fonts/TLRFont.ttf"
+dest_files=["res://.godot/imported/TLRFont.ttf-da18a29c7ada7ee4aa441e656e5179f5.fontdata"]
 
 [params]
 
