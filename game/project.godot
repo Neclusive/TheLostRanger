@@ -26,6 +26,12 @@ window/size/mode=4
 window/size/resizable=false
 window/stretch/mode="viewport"
 
+[gui]
+
+theme/default_font_antialiasing=0
+theme/default_font_hinting=0
+theme/default_font_subpixel_positioning=0
+
 [input]
 
 up={

@@ -30,44 +30,48 @@ volume_db = 5.0
 autoplay = true
 
 [node name="menu_options" type="Node2D" parent="."]
-position = Vector2(440, 80)
+position = Vector2(428, 140)
 
 [node name="play" type="Button" parent="menu_options"]
-offset_right = 120.0
-offset_bottom = 40.0
+texture_filter = 1
+offset_left = 64.0
+offset_right = 96.0
+offset_bottom = 20.0
 theme_override_fonts/font = ExtResource("4_4hy44")
-theme_override_font_sizes/font_size = 25
 text = "PLAY"
 flat = true
 alignment = 2
 
 [node name="settings" type="Button" parent="menu_options"]
-offset_top = 40.0
-offset_right = 118.0
-offset_bottom = 80.0
+texture_filter = 1
+offset_left = 64.0
+offset_top = 20.0
+offset_right = 120.0
+offset_bottom = 40.0
 scale = Vector2(1.01798, 1)
 theme_override_fonts/font = ExtResource("4_4hy44")
-theme_override_font_sizes/font_size = 25
 text = "SETTINGS"
 flat = true
 alignment = 2
 
 [node name="credits" type="Button" parent="menu_options"]
-offset_top = 120.0
-offset_right = 120.0
-offset_bottom = 160.0
+texture_filter = 1
+offset_left = 64.0
+offset_top = 40.0
+offset_right = 114.0
+offset_bottom = 60.0
 theme_override_fonts/font = ExtResource("4_4hy44")
-theme_override_font_sizes/font_size = 25
 text = "CREDITS"
 flat = true
 alignment = 2
 
 [node name="quit" type="Button" parent="menu_options"]
-offset_top = 160.0
-offset_right = 120.0
-offset_bottom = 200.0
+texture_filter = 1
+offset_left = 64.0
+offset_top = 60.0
+offset_right = 96.0
+offset_bottom = 80.0
 theme_override_fonts/font = ExtResource("4_4hy44")
-theme_override_font_sizes/font_size = 25
 text = "QUIT"
 flat = true
 alignment = 2
