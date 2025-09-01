@@ -19,32 +19,36 @@ texture = ExtResource("1_lti8b")
 position = Vector2(430, 120)
 
 [node name="play" type="Button" parent="menu_options"]
-offset_left = 40.0
-offset_right = 81.0
+offset_left = 10.0
+offset_right = 90.0
 offset_bottom = 31.0
 text = "Play"
 flat = true
+alignment = 0
 
 [node name="settings" type="Button" parent="menu_options"]
-offset_left = 40.0
+offset_left = 10.0
 offset_top = 31.0
-offset_right = 110.0
+offset_right = 90.0
 offset_bottom = 62.0
 text = "Settings"
 flat = true
-
-[node name="fullscreen" type="Button" parent="menu_options"]
-offset_left = 40.0
-offset_top = 62.0
-offset_right = 127.0
-offset_bottom = 93.0
-text = "Fullscreen"
-flat = true
+alignment = 0
 
 [node name="credits" type="Button" parent="menu_options"]
-offset_left = 40.0
-offset_top = 93.0
-offset_right = 103.0
-offset_bottom = 124.0
+offset_left = 10.0
+offset_top = 62.0
+offset_right = 90.0
+offset_bottom = 93.0
 text = "Credits"
 flat = true
+alignment = 0
+
+[node name="credits2" type="Button" parent="menu_options"]
+offset_left = 10.0
+offset_top = 93.0
+offset_right = 90.0
+offset_bottom = 124.0
+text = "Quit"
+flat = true
+alignment = 0
