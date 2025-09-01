@@ -17,13 +17,13 @@ func _on_pressed() -> void:
 [node name="Menu" type="Node2D"]
 
 [node name="bg" type="Sprite2D" parent="."]
-position = Vector2(320, 180)
-scale = Vector2(2.5, 360)
+position = Vector2(350, 180)
+scale = Vector2(2.73438, 360)
 texture = ExtResource("1_ouk20")
 
 [node name="logo" type="Sprite2D" parent="."]
 position = Vector2(180, 180)
-scale = Vector2(3.125, 3.125)
+scale = Vector2(3.0625, 3.125)
 texture = ExtResource("2_mhnvy")
 
 [node name="menu_music" type="AudioStreamPlayer2D" parent="."]
@@ -126,7 +126,7 @@ offset_right = 240.0
 offset_bottom = 52.0
 theme_override_fonts/font = ExtResource("4_mhnvy")
 theme_override_font_sizes/font_size = 32
-text = "chickenbuttgottem"
+text = "chickenbutthalmao"
 horizontal_alignment = 1
 vertical_alignment = 2
 uppercase = true
