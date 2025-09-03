@@ -97,10 +97,10 @@ alignment = 0
 script = SubResource("GDScript_ouk20")
 
 [node name="title" type="Label" parent="."]
-offset_left = 360.0
-offset_top = 40.0
-offset_right = 560.0
-offset_bottom = 80.0
+offset_left = 318.0
+offset_top = 37.0
+offset_right = 602.0
+offset_bottom = 82.0
 theme_override_font_sizes/font_size = 32
 text = "THE LOST RANGER"
 horizontal_alignment = 1
@@ -108,10 +108,11 @@ vertical_alignment = 1
 
 [node name="top_border" type="Label" parent="title"]
 layout_mode = 0
-offset_left = -40.0
-offset_top = -20.0
-offset_right = 240.0
-offset_bottom = 40.0
+offset_left = -54.0
+offset_top = -26.0
+offset_right = 226.0
+offset_bottom = 34.0
+scale = Vector2(1.424, 1.609)
 theme_override_fonts/font = ExtResource("4_mhnvy")
 theme_override_font_sizes/font_size = 32
 text = "bestgameofalltime"
@@ -120,10 +121,11 @@ uppercase = true
 
 [node name="bottom_border" type="Label" parent="title"]
 layout_mode = 0
-offset_left = -40.0
-offset_top = -8.0
-offset_right = 240.0
-offset_bottom = 52.0
+offset_left = -54.0
+offset_top = -37.0
+offset_right = 226.0
+offset_bottom = 23.0
+scale = Vector2(1.42417, 1.60864)
 theme_override_fonts/font = ExtResource("4_mhnvy")
 theme_override_font_sizes/font_size = 32
 text = "chickenbutthalmao"
