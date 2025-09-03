@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://diieidytcvpij"]
 
-[ext_resource type="Texture2D" uid="uid://bqjvikfjb486c" path="res://graphics/menu_bg_grad.tres" id="1_ouk20"]
-[ext_resource type="Texture2D" uid="uid://cc04aheacslob" path="res://graphics/logo.png" id="2_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://b2qkkryukuvul" path="res://graphics/menu_bg_grad.tres" id="1_ouk20"]
+[ext_resource type="Texture2D" path="res://graphics/logo.png" id="2_mhnvy"]
 [ext_resource type="AudioStream" uid="uid://cekfynrosa5nf" path="res://music/Days of Yore.mp3" id="3_ytr4m"]
 [ext_resource type="FontFile" uid="uid://dstjyeo236oq3" path="res://fonts/Runes.ttf" id="4_mhnvy"]
 
