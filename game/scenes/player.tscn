@@ -1,10 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8iu0f6rl327n"]
+[gd_scene load_steps=4 format=3 uid="uid://b8iu0f6rl327n"]
 
 [ext_resource type="Texture2D" uid="uid://bpjbljus78gwq" path="res://graphics/sprites/guyv2-2.png_1.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://bripkxvat4kav" path="res://scenes/playermovemnt.gd" id="2_g2els"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
+radius = 14.0
+height = 50.0
 
 [node name="player" type="Node2D"]
+position = Vector2(191, 22)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(37, 13)
-scale = Vector2(0.0625001, 0.0625001)
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_g2els")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(67, 27)
+shape = SubResource("CapsuleShape2D_g2els")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D/CollisionShape2D"]
+position = Vector2(1.00001, 0.999998)
+scale = Vector2(0.208984, 0.208984)
 texture = ExtResource("1_4flbx")
