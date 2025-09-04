@@ -1,9 +1,60 @@
-[gd_scene load_steps=7 format=3 uid="uid://diieidytcvpij"]
+[gd_scene load_steps=15 format=3 uid="uid://diieidytcvpij"]
 
 [ext_resource type="Texture2D" uid="uid://b2qkkryukuvul" path="res://graphics/menu_bg_grad.tres" id="1_ouk20"]
-[ext_resource type="Texture2D" path="res://graphics/logo.png" id="2_mhnvy"]
+[ext_resource type="Script" uid="uid://b0y7u3m1xgc2o" path="res://scenes/torch.gd" id="3_4ytvr"]
 [ext_resource type="AudioStream" uid="uid://cekfynrosa5nf" path="res://music/Days of Yore.mp3" id="3_ytr4m"]
+[ext_resource type="Texture2D" uid="uid://d0hwk8o4iv6gq" path="res://graphics/Logo/torch_spritesheet.png" id="4_4ytvr"]
 [ext_resource type="FontFile" uid="uid://dstjyeo236oq3" path="res://fonts/Runes.ttf" id="4_mhnvy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g3eks"]
+atlas = ExtResource("4_4ytvr")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v86rl"]
+atlas = ExtResource("4_4ytvr")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13sgg"]
+atlas = ExtResource("4_4ytvr")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6lef"]
+atlas = ExtResource("4_4ytvr")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70i5f"]
+atlas = ExtResource("4_4ytvr")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mj5lg"]
+atlas = ExtResource("4_4ytvr")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ufwb2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g3eks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v86rl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13sgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6lef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70i5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mj5lg")
+}],
+"loop": true,
+"name": &"fire",
+"speed": 5.0
+}]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mhnvy"]
 
@@ -21,10 +72,12 @@ position = Vector2(350, 180)
 scale = Vector2(2.73438, 360)
 texture = ExtResource("1_ouk20")
 
-[node name="logo" type="Sprite2D" parent="."]
+[node name="torch" type="AnimatedSprite2D" parent="."]
 position = Vector2(180, 180)
-scale = Vector2(3.0625, 3.125)
-texture = ExtResource("2_mhnvy")
+scale = Vector2(3.125, 3.125)
+sprite_frames = SubResource("SpriteFrames_ufwb2")
+animation = &"fire"
+script = ExtResource("3_4ytvr")
 
 [node name="menu_music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_ytr4m")
