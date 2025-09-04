@@ -18,10 +18,6 @@ boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="res://graphics/icon.svg"
 
-[autoload]
-
-Fade="*res://scenes/fade.tscn"
-
 [display]
 
 window/size/viewport_width=640
