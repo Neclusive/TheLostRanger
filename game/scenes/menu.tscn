@@ -150,21 +150,26 @@ alignment = 0
 script = SubResource("GDScript_ouk20")
 
 [node name="title" type="Label" parent="."]
-offset_left = 318.0
-offset_top = 37.0
-offset_right = 602.0
-offset_bottom = 82.0
+offset_left = 320.0
+offset_right = 600.0
+offset_bottom = 116.0
+size_flags_vertical = 0
 theme_override_font_sizes/font_size = 32
-text = "THE LOST RANGER"
+text = "the lost ranger"
 horizontal_alignment = 1
 vertical_alignment = 1
+uppercase = true
 
 [node name="top_border" type="Label" parent="title"]
-layout_mode = 0
-offset_left = -54.0
-offset_top = -26.0
-offset_right = 226.0
-offset_bottom = 34.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -188.0
+offset_top = 8.0
+offset_right = 65.0
+offset_bottom = 58.0
+grow_horizontal = 2
 scale = Vector2(1.424, 1.609)
 theme_override_fonts/font = ExtResource("4_mhnvy")
 theme_override_font_sizes/font_size = 32
@@ -173,11 +178,18 @@ horizontal_alignment = 1
 uppercase = true
 
 [node name="bottom_border" type="Label" parent="title"]
-layout_mode = 0
-offset_left = -54.0
-offset_top = -37.0
-offset_right = 226.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -188.0
+offset_top = -100.0
+offset_right = 65.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
 scale = Vector2(1.42417, 1.60864)
 theme_override_fonts/font = ExtResource("4_mhnvy")
 theme_override_font_sizes/font_size = 32

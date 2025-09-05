@@ -13,6 +13,7 @@ config_version=5
 config/name="TheLostRanger"
 run/main_scene="uid://diieidytcvpij"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+run/max_fps=30
 boot_splash/show_image=false
 boot_splash/fullsize=false
 boot_splash/use_filter=false
@@ -24,6 +25,8 @@ window/size/viewport_height=360
 window/size/mode=3
 window/size/resizable=false
 window/stretch/mode="viewport"
+mouse_cursor/custom_image="uid://dl1f7ln5r7n3h"
+mouse_cursor/custom_image_hotspot=Vector2(16, 0)
 
 [gui]
 
