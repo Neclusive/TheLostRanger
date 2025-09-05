@@ -1,2 +1,1 @@
-Fix logo import error
 Get rid of whatever control thing Greyson added to fix rune text
