@@ -1,33 +1,34 @@
-[gd_scene load_steps=15 format=3 uid="uid://diieidytcvpij"]
+[gd_scene load_steps=16 format=3 uid="uid://diieidytcvpij"]
 
-[ext_resource type="Texture2D" uid="uid://b2qkkryukuvul" path="res://graphics/menu_bg_grad.tres" id="1_ouk20"]
-[ext_resource type="Script" uid="uid://b0y7u3m1xgc2o" path="res://scenes/torch.gd" id="3_4ytvr"]
-[ext_resource type="AudioStream" uid="uid://cekfynrosa5nf" path="res://music/Days of Yore.mp3" id="3_ytr4m"]
-[ext_resource type="Texture2D" uid="uid://d0hwk8o4iv6gq" path="res://graphics/Logo/torch_spritesheet.png" id="4_4ytvr"]
-[ext_resource type="FontFile" uid="uid://dstjyeo236oq3" path="res://fonts/Runes.ttf" id="4_mhnvy"]
+[ext_resource type="Texture2D" uid="uid://dgtdfbtbhrgwh" path="res://graphics/tiles/first dungeon(gloomy)/brickwall_green.png" id="1_bt0g6"]
+[ext_resource type="Texture2D" uid="uid://b2qkkryukuvul" path="res://graphics/menu_bg_grad.tres" id="1_sf4ia"]
+[ext_resource type="Texture2D" uid="uid://d0hwk8o4iv6gq" path="res://graphics/Logo/torch_spritesheet.png" id="2_bt0g6"]
+[ext_resource type="Script" uid="uid://b0y7u3m1xgc2o" path="res://scenes/menus/torch.gd" id="3_f4dmw"]
+[ext_resource type="AudioStream" uid="uid://cekfynrosa5nf" path="res://music/Days of Yore.mp3" id="4_7yii3"]
+[ext_resource type="FontFile" uid="uid://dstjyeo236oq3" path="res://fonts/Runes.ttf" id="5_rdq0w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g3eks"]
-atlas = ExtResource("4_4ytvr")
+atlas = ExtResource("2_bt0g6")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v86rl"]
-atlas = ExtResource("4_4ytvr")
+atlas = ExtResource("2_bt0g6")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_13sgg"]
-atlas = ExtResource("4_4ytvr")
+atlas = ExtResource("2_bt0g6")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i6lef"]
-atlas = ExtResource("4_4ytvr")
+atlas = ExtResource("2_bt0g6")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_70i5f"]
-atlas = ExtResource("4_4ytvr")
+atlas = ExtResource("2_bt0g6")
 region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mj5lg"]
-atlas = ExtResource("4_4ytvr")
+atlas = ExtResource("2_bt0g6")
 region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ufwb2"]
@@ -68,91 +69,102 @@ func _on_pressed() -> void:
 [node name="Menu" type="Node2D"]
 
 [node name="bg" type="Sprite2D" parent="."]
-position = Vector2(350, 180)
-scale = Vector2(2.73438, 360)
-texture = ExtResource("1_ouk20")
+texture_repeat = 2
+position = Vector2(320, 180)
+scale = Vector2(1.0625, 1.11111)
+texture = ExtResource("1_bt0g6")
+region_enabled = true
+region_rect = Rect2(0, 0, 640, 360)
+
+[node name="bg_gradient" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+scale = Vector2(2.5, 360)
+texture = ExtResource("1_sf4ia")
 
 [node name="torch" type="AnimatedSprite2D" parent="."]
-position = Vector2(180, 180)
-scale = Vector2(3.125, 3.125)
+position = Vector2(120, 220)
+scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_ufwb2")
 animation = &"fire"
-script = ExtResource("3_4ytvr")
+script = ExtResource("3_f4dmw")
+
+[node name="torch2" type="AnimatedSprite2D" parent="."]
+position = Vector2(520, 216)
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_ufwb2")
+animation = &"fire"
+script = ExtResource("3_f4dmw")
 
 [node name="menu_music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_ytr4m")
+stream = ExtResource("4_7yii3")
 volume_db = 5.0
 autoplay = true
 parameters/looping = true
 
 [node name="menu_options" type="Node2D" parent="."]
-position = Vector2(480, 135)
+position = Vector2(260, 140)
 
 [node name="play" type="Button" parent="menu_options"]
 texture_filter = 1
-offset_right = 32.0
+offset_right = 120.0
 offset_bottom = 32.0
 theme_override_colors/font_hover_pressed_color = Color(0.31982, 0.527251, 1, 1)
 theme_override_colors/font_hover_color = Color(0.31982, 0.527251, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.150759, 0.385065, 0.999987, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mhnvy")
 text = "PLAY"
 flat = true
-alignment = 0
 
 [node name="settings" type="Button" parent="menu_options"]
 texture_filter = 1
 offset_top = 32.0
-offset_right = 56.0
+offset_right = 118.0
 offset_bottom = 64.0
 scale = Vector2(1.01798, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.31982, 0.527251, 1, 1)
 theme_override_colors/font_hover_color = Color(0.31982, 0.527251, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.150759, 0.385065, 0.999987, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mhnvy")
 text = "SETTINGS"
 flat = true
-alignment = 0
 
 [node name="credits" type="Button" parent="menu_options"]
 texture_filter = 1
 offset_top = 64.0
-offset_right = 50.0
+offset_right = 120.0
 offset_bottom = 96.0
 theme_override_colors/font_hover_pressed_color = Color(0.31982, 0.527251, 1, 1)
 theme_override_colors/font_hover_color = Color(0.31982, 0.527251, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.150759, 0.385065, 0.999987, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mhnvy")
 text = "CREDITS"
 flat = true
-alignment = 0
 
 [node name="quit" type="Button" parent="menu_options"]
 texture_filter = 1
 offset_top = 96.0
-offset_right = 32.0
+offset_right = 120.0
 offset_bottom = 128.0
 theme_override_colors/font_hover_pressed_color = Color(0.31982, 0.527251, 1, 1)
 theme_override_colors/font_hover_color = Color(0.31982, 0.527251, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.150759, 0.385065, 0.999987, 1)
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mhnvy")
 text = "QUIT"
 flat = true
-alignment = 0
 script = SubResource("GDScript_ouk20")
 
 [node name="title" type="Label" parent="."]
-offset_left = 320.0
-offset_right = 600.0
-offset_bottom = 116.0
+offset_top = -12.0
+offset_right = 640.0
+offset_bottom = 120.0
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 32
 text = "the lost ranger"
@@ -165,13 +177,13 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -188.0
-offset_top = 8.0
-offset_right = 65.0
-offset_bottom = 58.0
+offset_left = -320.0
+offset_top = 12.0
+offset_right = 129.0
+offset_bottom = 34.0
 grow_horizontal = 2
 scale = Vector2(1.424, 1.609)
-theme_override_fonts/font = ExtResource("4_mhnvy")
+theme_override_fonts/font = ExtResource("5_rdq0w")
 theme_override_font_sizes/font_size = 32
 text = "bestgameofalltime"
 horizontal_alignment = 1
@@ -184,14 +196,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -188.0
-offset_top = -100.0
-offset_right = 65.0
-offset_bottom = -50.0
+offset_left = -320.0
+offset_top = -60.0
+offset_right = 129.0
+offset_bottom = -38.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(1.42417, 1.60864)
-theme_override_fonts/font = ExtResource("4_mhnvy")
+theme_override_fonts/font = ExtResource("5_rdq0w")
 theme_override_font_sizes/font_size = 32
 text = "chickenbutthalmao"
 horizontal_alignment = 1
