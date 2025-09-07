@@ -1,11 +1,20 @@
-[gd_scene load_steps=16 format=3 uid="uid://diieidytcvpij"]
+[gd_scene load_steps=17 format=3 uid="uid://diieidytcvpij"]
 
 [ext_resource type="Texture2D" uid="uid://dgtdfbtbhrgwh" path="res://graphics/tiles/first dungeon(gloomy)/brickwall_green.png" id="1_bt0g6"]
 [ext_resource type="Texture2D" uid="uid://b2qkkryukuvul" path="res://graphics/menu_bg_grad.tres" id="1_sf4ia"]
 [ext_resource type="Texture2D" uid="uid://d0hwk8o4iv6gq" path="res://graphics/Logo/torch_spritesheet.png" id="2_bt0g6"]
 [ext_resource type="Script" uid="uid://b0y7u3m1xgc2o" path="res://scenes/menus/torch.gd" id="3_f4dmw"]
-[ext_resource type="AudioStream" uid="uid://cekfynrosa5nf" path="res://music/Days of Yore.mp3" id="4_7yii3"]
 [ext_resource type="FontFile" uid="uid://dstjyeo236oq3" path="res://fonts/Runes.ttf" id="5_rdq0w"]
+[ext_resource type="Script" uid="uid://bhrwdv23t1vou" path="res://scenes/menus/open_credits.gd" id="6_f4dmw"]
+
+[sub_resource type="GDScript" id="GDScript_bt0g6"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	Music.play_menu_music()
+"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g3eks"]
 atlas = ExtResource("2_bt0g6")
@@ -67,6 +76,7 @@ func _on_pressed() -> void:
 "
 
 [node name="Menu" type="Node2D"]
+script = SubResource("GDScript_bt0g6")
 
 [node name="bg" type="Sprite2D" parent="."]
 texture_repeat = 2
@@ -82,32 +92,20 @@ scale = Vector2(2.5, 360)
 texture = ExtResource("1_sf4ia")
 
 [node name="torch" type="AnimatedSprite2D" parent="."]
-position = Vector2(120, 220)
-scale = Vector2(2.5, 2.5)
+position = Vector2(160, 180)
+scale = Vector2(3.75, 3.76562)
 sprite_frames = SubResource("SpriteFrames_ufwb2")
 animation = &"fire"
 script = ExtResource("3_f4dmw")
-
-[node name="torch2" type="AnimatedSprite2D" parent="."]
-position = Vector2(520, 216)
-scale = Vector2(2.5, 2.5)
-sprite_frames = SubResource("SpriteFrames_ufwb2")
-animation = &"fire"
-script = ExtResource("3_f4dmw")
-
-[node name="menu_music" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_7yii3")
-volume_db = 5.0
-autoplay = true
-parameters/looping = true
 
 [node name="menu_options" type="Node2D" parent="."]
-position = Vector2(260, 140)
+position = Vector2(488, 140)
 
 [node name="play" type="Button" parent="menu_options"]
 texture_filter = 1
+offset_top = 4.0
 offset_right = 120.0
-offset_bottom = 32.0
+offset_bottom = 30.0
 theme_override_colors/font_hover_pressed_color = Color(0.31982, 0.527251, 1, 1)
 theme_override_colors/font_hover_color = Color(0.31982, 0.527251, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -116,10 +114,11 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mhnvy")
 text = "PLAY"
 flat = true
+alignment = 2
 
 [node name="settings" type="Button" parent="menu_options"]
 texture_filter = 1
-offset_top = 32.0
+offset_top = 38.0
 offset_right = 118.0
 offset_bottom = 64.0
 scale = Vector2(1.01798, 1)
@@ -131,12 +130,13 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mhnvy")
 text = "SETTINGS"
 flat = true
+alignment = 2
 
 [node name="credits" type="Button" parent="menu_options"]
 texture_filter = 1
-offset_top = 64.0
+offset_top = 75.0
 offset_right = 120.0
-offset_bottom = 96.0
+offset_bottom = 101.0
 theme_override_colors/font_hover_pressed_color = Color(0.31982, 0.527251, 1, 1)
 theme_override_colors/font_hover_color = Color(0.31982, 0.527251, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -145,12 +145,14 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mhnvy")
 text = "CREDITS"
 flat = true
+alignment = 2
+script = ExtResource("6_f4dmw")
 
 [node name="quit" type="Button" parent="menu_options"]
 texture_filter = 1
-offset_top = 96.0
+offset_top = 110.0
 offset_right = 120.0
-offset_bottom = 128.0
+offset_bottom = 136.0
 theme_override_colors/font_hover_pressed_color = Color(0.31982, 0.527251, 1, 1)
 theme_override_colors/font_hover_color = Color(0.31982, 0.527251, 1, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -159,14 +161,16 @@ theme_override_font_sizes/font_size = 24
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mhnvy")
 text = "QUIT"
 flat = true
+alignment = 2
 script = SubResource("GDScript_ouk20")
 
 [node name="title" type="Label" parent="."]
-offset_top = -12.0
-offset_right = 640.0
-offset_bottom = 120.0
+offset_left = 380.0
+offset_top = 40.0
+offset_right = 620.0
+offset_bottom = 79.0
 size_flags_vertical = 0
-theme_override_font_sizes/font_size = 32
+theme_override_font_sizes/font_size = 40
 text = "the lost ranger"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -177,15 +181,15 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -320.0
-offset_top = 12.0
-offset_right = 129.0
-offset_bottom = 34.0
+offset_left = -160.0
+offset_top = -32.0
+offset_right = 65.0
+offset_bottom = -10.0
 grow_horizontal = 2
 scale = Vector2(1.424, 1.609)
 theme_override_fonts/font = ExtResource("5_rdq0w")
-theme_override_font_sizes/font_size = 32
-text = "bestgameofalltime"
+theme_override_font_sizes/font_size = 24
+text = "awesomefillertextabc"
 horizontal_alignment = 1
 uppercase = true
 
@@ -196,18 +200,18 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -320.0
-offset_top = -60.0
-offset_right = 129.0
-offset_bottom = -38.0
+offset_left = -160.0
+offset_top = -3.0
+offset_right = 65.0
+offset_bottom = 19.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(1.42417, 1.60864)
 theme_override_fonts/font = ExtResource("5_rdq0w")
-theme_override_font_sizes/font_size = 32
-text = "chickenbutthalmao"
+theme_override_font_sizes/font_size = 24
+text = "extrastuftomakeitgay"
 horizontal_alignment = 1
-vertical_alignment = 2
 uppercase = true
 
+[connection signal="pressed" from="menu_options/credits" to="menu_options/credits" method="_on_pressed"]
 [connection signal="pressed" from="menu_options/quit" to="menu_options/quit" method="_on_pressed"]

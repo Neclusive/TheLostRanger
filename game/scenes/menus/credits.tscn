@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://cbjmm6i6eavnr"]
+
+[ext_resource type="Texture2D" uid="uid://dgtdfbtbhrgwh" path="res://graphics/tiles/first dungeon(gloomy)/brickwall_green.png" id="1_iiqlc"]
+[ext_resource type="Texture2D" uid="uid://b2qkkryukuvul" path="res://graphics/menu_bg_grad.tres" id="2_b2mra"]
+[ext_resource type="Texture2D" uid="uid://4aqcns1nmut7" path="res://graphics/icons/x.png" id="3_b2mra"]
+[ext_resource type="Script" uid="uid://h1snku7t6eac" path="res://scenes/menus/close_credits.gd" id="4_yrcfj"]
+
+[sub_resource type="GDScript" id="GDScript_yrcfj"]
+script/source = "extends Node2D
+
+func _ready():
+	Music.play_menu_music()
+"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yrcfj"]
+
+[node name="Credits" type="Node2D"]
+texture_repeat = 2
+script = SubResource("GDScript_yrcfj")
+
+[node name="bg" type="Sprite2D" parent="."]
+texture_repeat = 2
+position = Vector2(320, 180)
+scale = Vector2(1.0625, 1.11111)
+texture = ExtResource("1_iiqlc")
+region_enabled = true
+region_rect = Rect2(0, 0, 640, 360)
+
+[node name="bg_gradient" type="Sprite2D" parent="."]
+position = Vector2(320, 180)
+scale = Vector2(2.5, 360)
+texture = ExtResource("2_b2mra")
+
+[node name="credits" type="RichTextLabel" parent="."]
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 560.0
+offset_bottom = 320.0
+text = "Credits go here"
+
+[node name="close" type="Button" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 48.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yrcfj")
+icon = ExtResource("3_b2mra")
+script = ExtResource("4_yrcfj")
+
+[connection signal="pressed" from="close" to="close" method="_on_pressed"]
