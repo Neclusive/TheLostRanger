@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmnv7qg4atd5f"]
+
+[ext_resource type="AudioStream" uid="uid://cekfynrosa5nf" path="res://music/Days of Yore.mp3" id="1_skjnc"]
+[ext_resource type="Script" uid="uid://dqeikcxdib00s" path="res://scenes/menus/main/music.tres.gd" id="2_sgd00"]
+
+[node name="menu_music" type="AudioStreamPlayer"]
+stream = ExtResource("1_skjnc")
+autoplay = true
+script = ExtResource("2_sgd00")

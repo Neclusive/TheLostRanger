@@ -20,7 +20,7 @@ boot_splash/use_filter=false
 
 [autoload]
 
-Music="*res://scenes/menus/music.tscn"
+Music="*res://scenes/menus/main/music.tscn"
 
 [display]
 

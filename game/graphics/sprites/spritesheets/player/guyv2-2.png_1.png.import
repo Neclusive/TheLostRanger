@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y2wtfevflo8j"
-path="res://.godot/imported/fire particle.png-deaa08eebd6dce656ab167759dd6a916.ctex"
+uid="uid://bxgksxie3reks"
+path="res://.godot/imported/guyv2-2.png_1.png-84af13f748b3324478fc0d45a8207726.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graphics/sprites/particles/fire particle.png"
-dest_files=["res://.godot/imported/fire particle.png-deaa08eebd6dce656ab167759dd6a916.ctex"]
+source_file="res://graphics/sprites/spritesheets/player/guyv2-2.png_1.png"
+dest_files=["res://.godot/imported/guyv2-2.png_1.png-84af13f748b3324478fc0d45a8207726.ctex"]
 
 [params]
 
